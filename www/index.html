@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+<head>
+
+    <title>Launch External Apps</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
+    <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
+
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>  
+
+</head>
+
+<body>
+    <div id="splashscreen" class='ui-loader heavy'>
+        App Framework - Tab View App<br><br>
+        <span class='ui-icon ui-icon-loading spin'></span>
+        <h1>Starting app</h1>
+    </div>
+
+    <div class="view" class="android">
+        <header>
+            <h1>Title</h1>
+        </header>
+
+    <div class="pages">
+
+           
+        </div>
+
+        <footer>
+            <a href="#tab1" class="icon home" onclick="$.afui.clearHistory()">Home</a>
+            <a href="#tab2" class="icon heart" onclick="$.afui.clearHistory()">Favorite</a>
+            <a href="#tab3" class="icon message" onclick="$.afui.clearHistory()">Contact</a>
+            <a href="#tab4" class="icon user" onclick="$.afui.clearHistory()">Profile</a>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+        function launchProfile(){
+            // open inAppBrowser instance to launch external website
+            var ref = window.open("http://facebook.com/intel", "_blank", "");
+        }
+    </script>
+
+</body>
+
+</html>
